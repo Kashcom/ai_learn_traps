@@ -1,44 +1,47 @@
-# AI & Learn Through Traps
+# AI & Learn Through Traps 🧠🪤
 
-A mobile-first educational game that helps you master subjects by identifying and understanding common misconceptions ("Traps").
+A Gamified Learning Platform that uses AI to generate deceptive questions, testing student's understanding by luring them into common misconceptions ("traps") and providing targeted feedback.
 
-## Features
+## 🚀 Features
 
-- **Trap-Based Learning**: Questions specifically designed to test common misconceptions.
-- **AI Analysis**: Get detailed feedback on why you fell for a trap.
-- **Gamification**: XP, Levels, and **Badges** (e.g., "Sharp Eye", "Scholar").
-- **Admin Panel**: Manually add new concepts and trap questions (Teacher Mode).
-- **Rich Aesthetics**: Glassmorphism UI, smooth animations, and a premium dark mode theme.
+- **AI Trap Generation**: Dynamically creates questions with "Trap" answers based on cognitive bias patterns.
+- **Mobile App**: Cross-platform (iOS/Android) for learning on the go.
+- **Web Dashboard**: Admin panel for teachers to upload textbooks and view analytics.
+- **Textbook Parsing**: Upload PDFs to automatically extract curriculum concepts.
+- **Gamification**: XP, Levels, Badges, and Leaderboards.
+- **Dark Mode**: Beautiful, student-friendly UI.
 
-## Tech Stack
+## 📂 Project Structure
 
-- **Framework**: React (Vite)
-- **Language**: TypeScript
-- **Styling**: Vanilla CSS (CSS Variables + Utility approach)
-- **Icons**: Lucide React
-- **Router**: React Router DOM
+- **`/mobile`**: React Native (Expo) application.
+- **`/backend`**: Python FastAPI server with AI & SQLite.
+- **`/src`**: Original React Web Prototype (Legacy/Admin).
 
-## Getting Started
+## 🛠️ Quick Start
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+For detailed installation instructions, see [INSTALL_GUIDE.md](./INSTALL_GUIDE.md).
 
-2. Run the development server:
-   ```bash
-   npm run dev
-   ```
+### 1. Backend
+```bash
+cd backend
+pip install -r requirements.txt
+python main.py
+```
 
-3. Build for production:
-   ```bash
-   npm run build
-   ```
+### 2. Mobile App
+```bash
+cd mobile
+npm install
+npm run android
+```
 
-## Project Structure
+## 📱 Exporting APK
+To build the Android APK for production, see [APK_EXPORT_GUIDE.md](./APK_EXPORT_GUIDE.md).
 
-- `src/components`: UI Components (Layout, etc.)
-- `src/pages`: Main views (Home, Game, Profile)
-- `src/data`: Mock question database
-- `src/context`: Game state management (XP, Mistakes)
-- `src/index.css`: Design system and global styles
+## 🤝 Contributing
+1. Clone the repo.
+2. Create feature branch.
+3. Submit PR.
+
+## 📜 License
+MIT
