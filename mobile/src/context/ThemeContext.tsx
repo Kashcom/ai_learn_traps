@@ -13,6 +13,7 @@ export const Colors = {
         danger: '#ef4444',
         warning: '#eab308',
         highlight: 'rgba(99, 102, 241, 0.2)',
+        border: 'rgba(255,255,255,0.1)',
     },
     light: {
         background: '#f1f5f9',
@@ -24,6 +25,7 @@ export const Colors = {
         danger: '#dc2626',
         warning: '#ca8a04',
         highlight: 'rgba(79, 70, 229, 0.1)',
+        border: 'rgba(0,0,0,0.1)',
     }
 };
 

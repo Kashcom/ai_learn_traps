@@ -59,16 +59,31 @@ export default function HomeScreen() {
 
                 {/* Main Action */}
                 <Text style={[styles.sectionTitle, { color: colors.text }]}>Start Learning</Text>
+
                 <TouchableOpacity
                     style={[styles.playButton, { backgroundColor: colors.card, borderColor: colors.highlight }]}
-                    onPress={() => navigation.navigate('TopicSelection')}
+                    onPress={() => navigation.navigate('BookSelection')}
                 >
                     <View style={[styles.iconCircle, { backgroundColor: colors.highlight }]}>
                         <Play fill={colors.primary} color={colors.primary} size={24} />
                     </View>
                     <View style={styles.playContent}>
-                        <Text style={[styles.playTitle, { color: colors.text }]}>Play Daily Challenge</Text>
-                        <Text style={[styles.playSubtitle, { color: colors.textSecondary }]}>Test your knowledge on random topics</Text>
+                        <Text style={[styles.playTitle, { color: colors.text }]}>Select Textbook</Text>
+                        <Text style={[styles.playSubtitle, { color: colors.textSecondary }]}>Browse by Class & Chapter</Text>
+                    </View>
+                    <ArrowRight color={colors.textSecondary} size={20} />
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={[styles.playButton, { backgroundColor: colors.card, borderColor: colors.highlight, marginTop: -16 }]}
+                    onPress={() => navigation.navigate('TopicSelection')}
+                >
+                    <View style={[styles.iconCircle, { backgroundColor: 'rgba(234, 179, 8, 0.1)' }]}>
+                        <TrendingUp color={colors.warning} size={24} />
+                    </View>
+                    <View style={styles.playContent}>
+                        <Text style={[styles.playTitle, { color: colors.text }]}>Quick Challenge</Text>
+                        <Text style={[styles.playSubtitle, { color: colors.textSecondary }]}>Random generated traps</Text>
                     </View>
                     <ArrowRight color={colors.textSecondary} size={20} />
                 </TouchableOpacity>

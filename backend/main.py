@@ -185,6 +185,10 @@ def upload_textbook(
     except Exception as e:
         return {"status": "partial_success", "message": f"Book uploaded but parsing failed: {str(e)}", "book_id": book_id}
 
+@app.get("/textbooks")
+def get_textbooks(db: Session = Depends(get_db)):
+    return db.query(Textbook).all()
+
 @app.get("/textbooks/{book_id}/chapters")
 def get_chapters(book_id: str, db: Session = Depends(get_db)):
     return db.query(Chapter).filter(Chapter.textbook_id == book_id).all()
